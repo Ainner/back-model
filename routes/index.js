@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
       }).sort({ createdAt: -1 });
 })
 
-router.post('/', must, upload.array('file'), (req, res, next) => {
+router.post('/', upload.array('file'), (req, res, next) => {
     let { content } = req.body;
     let index = {
         content,
@@ -21,7 +21,7 @@ router.post('/', must, upload.array('file'), (req, res, next) => {
     };
     indexModel.create(index, (err, result) => {
         if (err) { return res.status(500).send(err) }
-        res.send({ msg: '发布成功' });
+        res.send({ msg: 'succeed' });
     })
 })
 

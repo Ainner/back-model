@@ -14,13 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/uploads', express.static('uploads'));
-// app.get('/', function (req, res) {
-//     res.send('hello world')
-// })
 
 app.listen(3000, () => {
     console.log('app listen 3000...');
 });
   
-// module.exports = app;
+module.exports = app;
   
